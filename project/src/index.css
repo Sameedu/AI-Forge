@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Grid Background */
+.grid-pattern {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.grid-pattern-dark {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Floating Navigation */
+.floating-nav {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease;
+}
+
+.floating-nav.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Gradients */
+.gradient-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 50%, #34d399 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #f43f5e 0%, #f97316 50%, #facc15 100%);
+}
+
+/* Animated Background */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-bg {
+  background: linear-gradient(-45deg, #6366f1, #8b5cf6, #3b82f6, #2dd4bf);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+}
+
+/* Pill Navigation */
+.pill-nav {
+  @apply px-4 py-2 rounded-full transition-all duration-300;
+}
+
+.pill-nav:hover {
+  @apply bg-white bg-opacity-20;
+}
+
+.pill-nav.active {
+  @apply bg-white text-indigo-600 shadow-lg;
+}
+
+/* Glass Cards */
+.glass-card {
+  @apply backdrop-blur-lg bg-white bg-opacity-30 border border-white border-opacity-20 rounded-2xl;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8);
+}
